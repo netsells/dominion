@@ -37,6 +37,9 @@ abstract class ValueObject<Failure, T> {
   ///
   /// This should be used when you have already validated the value,
   /// and so you expect it to be valid.
+  ///
+  /// Do not use this for validation (for example, by wrapping in a `try`/`catch`).
+  /// Instead, use the [value] field, or the [isValid] getter.
   T getOrCrash() {
     return value.fold((f) => throw UnexpectedValueError(f), id);
   }
