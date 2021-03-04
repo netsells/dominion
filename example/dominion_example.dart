@@ -14,7 +14,6 @@ class Password extends ValueObject<PasswordFailure, String> {
   final Either<PasswordFailure, String> value;
 
   factory Password(String input) {
-    assert(input != null);
     if (input.isEmpty) {
       return Password._(left(PasswordFailure('Password is empty.')));
     } else if (input.length < 8) {

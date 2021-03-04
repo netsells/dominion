@@ -6,7 +6,6 @@ class _FakeValueObject extends ValueObject<String, String> {
   final Either<String, String> value;
 
   factory _FakeValueObject(String input) {
-    assert(input != null);
     if (input.isNotEmpty) {
       return _FakeValueObject._(right(input));
     } else {
