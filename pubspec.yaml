@@ -1,6 +1,6 @@
 name: dominion
 description: Utilities for domain-driven design
-version: 1.0.0-nullsafety.1
+version: 1.0.0
 repository: https://github.com/netsells/dominion
 environment:
   sdk: ">=2.12.0 <3.0.0"
